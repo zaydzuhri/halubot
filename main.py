@@ -1,7 +1,11 @@
 import discord
 import random
+import os
+from dotenv import load_dotenv
 
-DISCORD_TOKEN = "ODU1ODE4Nzk2MDAxNjU2ODMy.YM4BXQ.buHDJpcUpOJLelVaD3g9zVEuiXk"
+load_dotenv('.env')
+DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
+
 client = discord.Client()
 
 @client.event
